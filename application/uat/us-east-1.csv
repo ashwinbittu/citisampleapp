@@ -1,0 +1,11 @@
+aws_region;us-east-1;terraform;false;false;preferred region
+tf_host;app.terraform.io;terraform;false;false;Terraform HostName
+tf_org;CitiPoC;terraform;false;false;Terraform Org Name
+app_name;citisampleapp;terraform;false;false;App Name
+app_csi;167843;terraform;false;false;App CSI
+app_env;DEV;terraform;false;false;App ENV
+app_version;1;terraform;false;false;APP Version
+inst_device_name;\/dev\/xvdh;terraform;false;false;App Block Device Name
+repave_strategy;bluegreen;terraform;false;false;Repaving Strategy
+inst_type;t2.micro;terraform;false;false;App EC2 Instnace Type
+path_to_public_key;\/home\/ec2-user\/mykey.pub;terraform;false;false;Path to EC2 Public Key
