@@ -1,7 +1,7 @@
 aws_region;us-east-1;terraform;false;false;preferred region
 tf_host;app.terraform.io;terraform;false;false;Terraform HostName
 tf_org;CitiPoC;terraform;false;false;Terraform Org Name
-app_name;citisampleapp;terraform;false;false;App Name
+app_name;sampleapp;terraform;false;false;App Name
 app_csi;167843;terraform;false;false;App CSI
 app_env;DEV;terraform;false;false;App ENV
 app_version;1;terraform;false;false;APP Version
