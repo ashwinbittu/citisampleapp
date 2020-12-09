@@ -4,9 +4,11 @@ variable "aws_region" {
 }
 
 variable "aws_key" {
+  default = ""  
 }
 
 variable "aws_sec" {
+  default = ""  
 }
 
 variable "tf_org" {
