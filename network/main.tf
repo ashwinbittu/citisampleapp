@@ -36,7 +36,7 @@ module "elb" {
   aws_region = var.aws_region
   aws_subnet_ids = module.vpc.aws_subnet_ids 
   aws_security_group_elb_id = module.sg.aws_security_group_elb_id
-  #lb_ssl_id = var.lb_ssl_id  
+  lb_ssl_id = "1234"  
   app_env   = var.app_env
   app_name   = var.app_name  
   app_csi   = var.app_csi    
