@@ -3,6 +3,7 @@ variable "aws_key" {
 }
 
 variable "aws_sec" {
+  default = ""
 }
 
 variable "tf_org" {
