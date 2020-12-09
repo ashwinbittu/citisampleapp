@@ -5,10 +5,10 @@ provider "aws" {
   secret_key = var.aws_sec
 }
 
-data "aws_route53_zone" "selected" {
-  name         = var.aws_route53_zone_name
-  #private_zone = false
-}
+#data "aws_route53_zone" "selected" {
+#  name         = var.aws_route53_zone_name
+#  #private_zone = false
+#}
 
 module "vpc" {
   source = "app.terraform.io/CitiPoC/vpc/aws"
