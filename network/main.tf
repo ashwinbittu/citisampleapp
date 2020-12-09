@@ -63,7 +63,7 @@ module "elb" {
 #  repave_strategy = var.repave_strategy 
 #  aws_route53_zone_name = var.aws_route53_zone_name
 #  aws_vpc_id = module.vpc.aws_vpc_id
-}
+#}
 
 module "ec2key" {
   source = "app.terraform.io/CitiPoC/ec2-key/aws"
