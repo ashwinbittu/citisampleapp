@@ -1,4 +1,5 @@
 variable "aws_key" {
+  default = ""
 }
 
 variable "aws_sec" {
