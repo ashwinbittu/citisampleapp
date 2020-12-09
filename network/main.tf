@@ -42,27 +42,27 @@ module "elb" {
   app_csi   = var.app_csi    
 }
 
-module "route53" {
-  source = "app.terraform.io/CitiPoC/route53/aws"
-  aws_region = var.aws_region
-  app_env   = var.app_env
-  app_name  = var.app_name  
-  app_csi   = var.app_csi  
-  aws_route53_zone_id = data.aws_route53_zone.selected.zone_id
-  aws_route53_record_name = var.aws_route53_record_name
+#module "route53" {
+#  source = "app.terraform.io/CitiPoC/route53/aws"
+#  aws_region = var.aws_region
+#  app_env   = var.app_env
+#  app_name  = var.app_name  
+#  app_csi   = var.app_csi  
+#  aws_route53_zone_id = data.aws_route53_zone.selected.zone_id
+#  aws_route53_record_name = var.aws_route53_record_name
 
-  # Adding to "dulastack." needs to be revied with service owner 
-  #aws_elb_dns_name = var.aws_elb_dns_name == "" ? "dummy-elb.us-east-1.elb.amazonaws.com" : "dualstack.${var.aws_elb_dns_name}"
-  aws_elb_dns_name = module.elb.aws_elb_dns_name #"dualstack.${module.elb.aws_elb_dns_name}"
+#  # Adding to "dulastack." needs to be revied with service owner 
+#  #aws_elb_dns_name = var.aws_elb_dns_name == "" ? "dummy-elb.us-east-1.elb.amazonaws.com" : "dualstack.${var.aws_elb_dns_name}"
+#  aws_elb_dns_name = module.elb.aws_elb_dns_name #"dualstack.${module.elb.aws_elb_dns_name}"
 
-  # Passing defalut us-east-1 zone id to avoid apply error, logic needs to change later 
-  #aws_elb_zone_id = var.aws_elb_zone_id == "" ? "Z35SXDOTRQ7X7K" : var.aws_elb_zone_id
-  aws_elb_zone_id = module.elb.aws_elb_zone_id
+#  # Passing defalut us-east-1 zone id to avoid apply error, logic needs to change later 
+#  #aws_elb_zone_id = var.aws_elb_zone_id == "" ? "Z35SXDOTRQ7X7K" : var.aws_elb_zone_id
+#  aws_elb_zone_id = module.elb.aws_elb_zone_id
 
 
-  repave_strategy = var.repave_strategy 
-  aws_route53_zone_name = var.aws_route53_zone_name
-  aws_vpc_id = module.vpc.aws_vpc_id
+#  repave_strategy = var.repave_strategy 
+#  aws_route53_zone_name = var.aws_route53_zone_name
+#  aws_vpc_id = module.vpc.aws_vpc_id
 }
 
 module "ec2key" {
