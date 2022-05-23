@@ -2,8 +2,8 @@ aws_region;us-east-2;terraform;false;false;preferred region
 tf_host;app.terraform.io;terraform;false;false;Terraform HostName
 tf_org;CentenePoC;terraform;false;false;Terraform Org Name
 app_name;sampleapp;terraform;false;false;App Name
-app_csi;167843;terraform;false;false;App CSI
-app_env;DEV;terraform;false;false;App ENV
+app_id;167843;terraform;false;false;App ID
+app_env;PROD;terraform;false;false;App ENV
 app_version;1;terraform;false;false;APP Version
 inst_device_name;\/dev\/xvdh;terraform;false;false;App Block Device Name
 repave_strategy;bluegreen;terraform;false;false;Repaving Strategy
