@@ -11,7 +11,7 @@ provider "aws" {
 #}
 
 module "vpc" {
-  source = "app.terraform.io/CitiPoC/vpc/aws"
+  source = "app.terraform.io/CentenePoC/vpc/aws"
   aws_region = var.aws_region
   no_of_subnets = var.no_of_subnets
   aws_vpc_cidr_block   = var.aws_vpc_cidr_block
@@ -22,7 +22,7 @@ module "vpc" {
 }
 
 module "sg" {
-  source = "app.terraform.io/CitiPoC/sg/aws"
+  source = "app.terraform.io/CentenePoC/sg/aws"
   aws_region = var.aws_region
   aws_vpc_id = module.vpc.aws_vpc_id
   app_env   = var.app_env
@@ -32,7 +32,7 @@ module "sg" {
 }
 
 module "elb" {
-   source = "app.terraform.io/CitiPoC/elb/aws"
+   source = "app.terraform.io/CentenePoC/elb/aws"
   aws_region = var.aws_region
   aws_subnet_ids = module.vpc.aws_subnet_ids 
   aws_security_group_elb_id = module.sg.aws_security_group_elb_id
@@ -43,7 +43,7 @@ module "elb" {
 }
 
 #module "route53" {
-#  source = "app.terraform.io/CitiPoC/route53/aws"
+#  source = "app.terraform.io/CentenePoC/route53/aws"
 #  aws_region = var.aws_region
 #  app_env   = var.app_env
 #  app_name  = var.app_name  
@@ -66,7 +66,7 @@ module "elb" {
 #}
 
 module "ec2key" {
-  source = "app.terraform.io/CitiPoC/ec2-key/aws"
+  source = "app.terraform.io/CentenePoC/ec2-key/aws"
   aws_region = var.aws_region
   app_env   = var.app_env
   app_name   = var.app_name  
