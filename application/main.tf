@@ -17,7 +17,7 @@ data "terraform_remote_state" "network" {
 }
 
 module "launch-configuration" {
-  source  = "app.terraform.io/CitiPoC/launch-configuration/aws"
+  source  = "app.terraform.io/CentenePoC/launch-configuration/aws"
   aws_ec2_keypair_name = data.terraform_remote_state.network.outputs.aws_ec2_keypair_name 
   aws_security_group_instances_id = data.terraform_remote_state.network.outputs.aws_security_group_instances_id  
   inst_type = var.inst_type
@@ -34,7 +34,7 @@ module "launch-configuration" {
 
 
 module "asg" {
-  source  = "app.terraform.io/CitiPoC/asg/aws"
+  source  = "app.terraform.io/CentenePoC/asg/aws"
   aws_elb_name = data.terraform_remote_state.network.outputs.aws_elb_name
   aws_subnet_ids = data.terraform_remote_state.network.outputs.aws_subnet_ids  
   aws_launch_configuration_name = module.launch-configuration.aws_launch_configuration_name 
