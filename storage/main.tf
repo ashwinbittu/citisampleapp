@@ -7,7 +7,7 @@ provider "aws" {
 
 
 module "s3" {
-  source   = "app.terraform.io/CitiPoC/s3/aws"
+  source   = "app.terraform.io/CentenePoC/s3/aws"
   aws_region = var.aws_region
   app_env   = var.app_env
   app_name   = var.app_name  
