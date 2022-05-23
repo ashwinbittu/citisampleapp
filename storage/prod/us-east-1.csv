@@ -3,7 +3,7 @@ tf_host;app.terraform.io;terraform;false;false;Terraform HostName
 tf_org;CentenePoC;terraform;false;false;Terraform Org Name
 app_name;sampleapp;terraform;false;false;App Name
 app_id;167843;terraform;false;false;App ID
-app_env;DEV;terraform;false;false;App ENV
+app_env;PROD;terraform;false;false;App ENV
 repave_strategy;bluegreen;terraform;false;false;Repaving Strategy
 bucket_name;centene-sampleapp-s3bucket;terraform;false;false;Bucket Name
 aws_route53_zone_id;Z0970915QC1TPFD6UAWH;terraform;false;false;Hosted Zone ID
