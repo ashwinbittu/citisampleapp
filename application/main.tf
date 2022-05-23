@@ -41,7 +41,7 @@ module "asg" {
   repave_strategy = var.repave_strategy  
   app_env   = var.app_env
   app_name   = var.app_name  
-  app_csi   = var.app_csi   
+  app_id   = var.app_id   
 }
 
 
