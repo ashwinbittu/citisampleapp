@@ -22,6 +22,7 @@ variable "app_csi" {
 }
 
 variable "aws_region" {
+  default = ""
 }
 
 variable "no_of_subnets" {
