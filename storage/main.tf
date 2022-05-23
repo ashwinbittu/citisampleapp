@@ -11,7 +11,7 @@ module "s3" {
   aws_region = var.aws_region
   app_env   = var.app_env
   app_name   = var.app_name  
-  app_csi   = var.app_csi    
+  app_id   = var.app_id    
   bucket_name = var.bucket_name
   repave_strategy = var.repave_strategy
 }
