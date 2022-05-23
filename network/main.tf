@@ -17,7 +17,7 @@ module "vpc" {
   aws_vpc_cidr_block   = var.aws_vpc_cidr_block
   app_env   = var.app_env
   app_name   = var.app_name  
-  app_csi   = var.app_csi  
+  app_id   = var.app_id  
   aws_vpc_instance_tenancy = var.aws_vpc_instance_tenancy
 }
 
@@ -27,7 +27,7 @@ module "sg" {
   aws_vpc_id = module.vpc.aws_vpc_id
   app_env   = var.app_env
   app_name   = var.app_name  
-  app_csi   = var.app_csi
+  app_id   = var.app_id
   aws_sg_name   = var.aws_sg_name    
 }
 
@@ -39,7 +39,7 @@ module "elb" {
   lb_ssl_id = "1234"  
   app_env   = var.app_env
   app_name   = var.app_name  
-  app_csi   = var.app_csi    
+  app_id   = var.app_id    
 }
 
 #module "route53" {
@@ -47,7 +47,7 @@ module "elb" {
 #  aws_region = var.aws_region
 #  app_env   = var.app_env
 #  app_name  = var.app_name  
-#  app_csi   = var.app_csi  
+#  app_id   = var.app_id  
 #  aws_route53_zone_id = data.aws_route53_zone.selected.zone_id
 #  aws_route53_record_name = var.aws_route53_record_name
 
@@ -70,7 +70,7 @@ module "ec2key" {
   aws_region = var.aws_region
   app_env   = var.app_env
   app_name   = var.app_name  
-  app_csi   = var.app_csi 
+  app_id   = var.app_id 
   path_to_public_key = var.path_to_public_key   
 }
 
