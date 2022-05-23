@@ -6,6 +6,7 @@ variable "tf_host" {
 }
 
 variable "aws_region" {
+  default = "us-east-1"
 }
 
 variable "repave_strategy" {
