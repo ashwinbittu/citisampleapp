@@ -1,5 +1,5 @@
-# CitiSampleApp Terraform Template
+# SampleApp Terraform Template
 
-Terraform Template for creating Infra for application CitiSampleApp.
+Terraform Template for creating Infra for application SampleApp.
 
 
