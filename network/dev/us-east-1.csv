@@ -15,4 +15,4 @@ aws_route53_record_name;www.ashwinradhakrishnan.net.;terraform;false;false;Route
 path_to_public_key;\/home\/ec2-user\/mykey.pub;terraform;false;false;Path to EC2 Public Key
 lb_ssl_id;arn:aws:acm:us-east-1:109769995951:certificate\/b1f23a70-6d55-4439-b2f3-4ca05927fa74;terraform;false;false;Cert id 
 AWS_ACCESS_KEY_ID;AKIAQUBMGSC46KW7AF5L;env;false;false;preferred region
-AWS_SECRET_ACCESS_KEY;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;env;false;false;preferred region
+AWS_SECRET_ACCESS_KEY;QCGH8AG0GLrFml2Q9V1waKZIBsQ9hN2y+PT8q\/06;env;false;false;preferred region
