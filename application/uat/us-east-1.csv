@@ -1,4 +1,3 @@
-aws_region;us-east-1;terraform;false;false;preferred region
 tf_host;app.terraform.io;terraform;false;false;Terraform HostName
 tf_org;CentenePoC;terraform;false;false;Terraform Org Name
 app_name;sampleapp;terraform;false;false;App Name
