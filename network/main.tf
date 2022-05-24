@@ -1,8 +1,8 @@
 provider "aws" {
   #version = "~> 2.28"  
   region     = var.aws_region
-  access_key = var.aws_key
-  secret_key = var.aws_sec
+  #access_key = var.aws_key
+  #secret_key = var.aws_sec
 }
 
 #data "aws_route53_zone" "selected" {
