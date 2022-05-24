@@ -1,15 +1,15 @@
 
 variable "aws_region" {
-  default = "us-east-1"
+  default = ""
 }
 
-variable "aws_key" {
-  default = ""  
-}
+#variable "aws_key" {
+#  default = ""  
+#}
 
-variable "aws_sec" {
-  default = ""  
-}
+#variable "aws_sec" {
+#  default = ""  
+#}
 
 variable "tf_org" {
 }
