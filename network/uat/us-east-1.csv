@@ -1,4 +1,3 @@
-aws_region;us-east-1;env;false;false;preferred region
 tf_host;app.terraform.io;terraform;false;false;Terraform HostName
 tf_org;CentenePoC;terraform;false;false;Terraform Org Name
 app_name;sampleapp;terraform;false;false;App Name
@@ -13,3 +12,5 @@ aws_route53_zone_id;Z0970915QC1TPFD6UAWH;terraform;false;false;Hosted Zone ID
 aws_route53_zone_name;ashwinradhakrishnan.net.;terraform;false;false;Route53 DNS Name
 aws_route53_record_name;www.ashwinradhakrishnan.net.;terraform;false;false;Route53 DNS Record
 path_to_public_key;\/home\/ec2-user\/mykey.pub;terraform;false;false;Path to EC2 Public Key
+AWS_ACCESS_KEY_ID;testing;env;false;true;AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY;testing;env;false;true;AWS_SECRET_ACCESS_KEY
