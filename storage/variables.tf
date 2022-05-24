@@ -6,7 +6,7 @@ variable "tf_host" {
 }
 
 variable "aws_region" {
-  default = "us-east-1"
+  #default = "us-east-1"
 }
 
 variable "repave_strategy" {
@@ -24,8 +24,8 @@ variable "app_name" {
 variable "app_id" {
 }
 
-variable "aws_key" {
-}
+#variable "aws_key" {
+#}
 
-variable "aws_sec" {
-}
+#variable "aws_sec" {
+#}
