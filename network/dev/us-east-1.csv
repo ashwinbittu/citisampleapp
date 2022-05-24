@@ -13,5 +13,5 @@ aws_route53_zone_name;ashwinradhakrishnan.net.;terraform;false;false;Route53 DNS
 aws_route53_record_name;www.ashwinradhakrishnan.net.;terraform;false;false;Route53 DNS Record
 path_to_public_key;\/home\/ec2-user\/mykey.pub;terraform;false;false;Path to EC2 Public Key
 lb_ssl_id;arn:aws:acm:us-east-1:109769995951:certificate\/b1f23a70-6d55-4439-b2f3-4ca05927fa74;terraform;false;false;Cert id
-AWS_ACCESS_KEY_ID;testing;env;false;true;preferred region
-AWS_SECRET_ACCESS_KEY;testing;env;false;true;preferred region
+AWS_ACCESS_KEY_ID;testing;env;false;true;AWS_ACCESS_KEY_ID
+AWS_SECRET_ACCESS_KEY;testing;env;false;true;AWS_SECRET_ACCESS_KEY
