@@ -10,14 +10,8 @@ provider "aws" {
 #  #private_zone = false
 #}
 
-locals {
-  vpcmoduleource = "app.terraform.io/CentenePoC/vpc/aws"
-  sgmoduleource = "app.terraform.io/${var.tf_org}/sg/aws"
-  elbcmoduleource = "app.terraform.io/${var.tf_org}/elb/aws"
-}
-
 module "vpc" {
-  source = locals.vpcmoduleource
+  source = "app.terraform.io/CentenePoC/vpc/aws"
   #aws_region = var.aws_region
   no_of_subnets = var.no_of_subnets
   aws_vpc_cidr_block   = var.aws_vpc_cidr_block
@@ -28,7 +22,7 @@ module "vpc" {
 }
 
 module "sg" {
-  source = locals.sgmoduleource
+  source = "app.terraform.io/CentenePoC/sg/aws"
   #aws_region = var.aws_region
   aws_vpc_id = module.vpc.aws_vpc_id
   app_env   = var.app_env
@@ -38,7 +32,7 @@ module "sg" {
 }
 
 module "elb" {
-  source = locals.elbcmoduleource
+  source = "app.terraform.io/CentenePoC/elb/aws"
   #aws_region = var.aws_region
   aws_subnet_ids = module.vpc.aws_subnet_ids 
   aws_security_group_elb_id = module.sg.aws_security_group_elb_id
@@ -72,7 +66,7 @@ module "elb" {
 #}
 
 module "ec2key" {
-  source = "app.terraform.io/${var.tf_org}/ec2-key/aws"
+  source = "app.terraform.io/CentenePoC/ec2-key/aws"
   #aws_region = var.aws_region
   app_env   = var.app_env
   app_name   = var.app_name  
