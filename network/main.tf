@@ -11,7 +11,7 @@ provider "aws" {
 #}
 
 locals {
-  vpcmoduleource = "app.terraform.io/${var.tf_org}/vpc/aws"
+  vpcmoduleource = "app.terraform.io/CentenePoC/vpc/aws"
   sgmoduleource = "app.terraform.io/${var.tf_org}/sg/aws"
   elbcmoduleource = "app.terraform.io/${var.tf_org}/elb/aws"
 }
