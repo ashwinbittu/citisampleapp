@@ -10,8 +10,14 @@ provider "aws" {
 #  #private_zone = false
 #}
 
+locals {
+  vpcmoduleource = "app.terraform.io/${var.tf_org}/vpc/aws"
+  sgmoduleource = "app.terraform.io/${var.tf_org}/sg/aws"
+  elbcmoduleource = "app.terraform.io/${var.tf_org}/elb/aws"
+}
+
 module "vpc" {
-  source = "app.terraform.io/${var.tf_org}/vpc/aws"
+  source = locals.vpcmoduleource
   #aws_region = var.aws_region
   no_of_subnets = var.no_of_subnets
   aws_vpc_cidr_block   = var.aws_vpc_cidr_block
@@ -22,7 +28,7 @@ module "vpc" {
 }
 
 module "sg" {
-  source = "app.terraform.io/${var.tf_org}/sg/aws"
+  source = locals.sgmoduleource
   #aws_region = var.aws_region
   aws_vpc_id = module.vpc.aws_vpc_id
   app_env   = var.app_env
@@ -32,7 +38,7 @@ module "sg" {
 }
 
 module "elb" {
-  source = "app.terraform.io/${var.tf_org}/elb/aws"
+  source = locals.elbcmoduleource
   #aws_region = var.aws_region
   aws_subnet_ids = module.vpc.aws_subnet_ids 
   aws_security_group_elb_id = module.sg.aws_security_group_elb_id
