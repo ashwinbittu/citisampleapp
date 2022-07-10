@@ -1,8 +1,6 @@
 provider "aws" {
   #version = "~> 2.28"
   #region     = var.aws_region
-  #access_key = var.aws_key
-  #secret_key = var.aws_sec
 }
 
 data "terraform_remote_state" "network" {
@@ -26,10 +24,8 @@ module "launch-configuration" {
   aws_ebs_volume_type = var.aws_ebs_volume_type
   inst_device_name = var.inst_device_name   
   repave_strategy = var.repave_strategy  
-  #aws_region = var.aws_region
-  #aws_key   = var.aws_key
-  #aws_sec   = var.aws_sec
   app_version   = var.app_version   
+  ami_owners   = var.ami_owners 
 }
 
 
@@ -43,5 +39,3 @@ module "asg" {
   app_name   = var.app_name  
   app_id   = var.app_id   
 }
-
-
