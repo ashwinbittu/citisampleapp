@@ -3,14 +3,6 @@ variable "aws_region" {
   default = ""
 }
 
-#variable "aws_key" {
-#  default = ""  
-#}
-
-#variable "aws_sec" {
-#  default = ""  
-#}
-
 variable "tf_org" {
 }
 
@@ -56,4 +48,7 @@ variable "aws_ebs_volume_type" {
 }
 
 variable "inst_device_name" {
+}
+
+variable "ami_owners" {
 }
